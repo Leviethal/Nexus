@@ -1,0 +1,276 @@
+/* Root Variables */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+:root {
+    --primary-color: #000000; /* Black */
+    --secondary-color: #1e3a8a; /* Dark Blue */
+    --accent-color: #6b21a8; /* Purple */
+    --highlight-color: #ec4899; /* Pink */
+    --text-color: #ffffff;
+    --background-color: #000000;
+}
+/* CP Sprint (Main Event Title) */
+/* CP Sprint (Main Event Title) */
+/* CP Sprint (Main Event Title) */
+
+
+.CP {
+    
+   
+    background-image: linear-gradient(to right, #ff5757, #ff66b4, #ff66b4, #ff71fe, #38b6ff, #5ce1e6, #00adad, #5170ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 15vw; /* Reduce font size slightly */
+    text-align: center;
+    padding: 0 0 0vw 0; /* Further reduce padding */
+    margin: -1.5vw 0 0 0; /* Reduce margin for less space */
+    font-weight: 800;
+    font-family: 'Bebas Neue', sans-serif;
+    z-index: 2; /* Ensure it stays above the Hackathon text */
+}
+
+/* Hackathon Subheading */
+.Hackathon {
+    position: relative; /* Ensure it's not absolute */
+    color: white;
+    font-family: 'Caveat';
+    text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff;
+    font-size: 5vw; /* Reduce font size to make room */
+    margin-top: 2vw; /* Further reduce margin-top */
+    text-align: center; /* Center align Hackathon */
+    z-index: 1; /* Ensure it stays below the CP Sprint text */
+}
+
+/* General Body Styles */
+/* General Body Styles */
+body {
+    font-family: 'Russo One', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color); /* Set font color to white */
+    background-color: var(--background-color);
+    position: relative;
+    height: 100vh; /* Full screen height */
+}
+
+.event-description h1,
+.event-description p,
+nav ul li a,
+.Register {
+    font-family: 'Russo One', sans-serif;
+}
+
+
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the whole screen */
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+header img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+nav ul li a:hover {
+    color:blue; /* Pink color on hover */
+    text-shadow: 0 0 10px #ec4899, 0 0 20px #ec4899;
+}
+
+/* Event Page */
+
+.event-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1% 2%;
+    flex-direction: column;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.event-content {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.event-description {
+    margin-top: 1rem;
+}
+
+.event-description h1 {
+    font-size: 70px;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+
+.event-description p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: var(--text-color);
+}
+
+.Register {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16.8px;
+    color: #fff;
+    background-color: #040726a5;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.Register::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-30deg);
+    transition: left 0.4s ease;
+}
+
+.Register:hover {
+    background-color: #040e44ad;
+    transform: scale(1.05);
+}
+
+
+.Register:hover::before {
+    left: 100%;
+}
+.Register {
+    width: 200px;
+    height: 50px;
+    border: 2px solid #00ffff2f;
+    /* Cyan border */
+    border-radius: 25px;
+    box-shadow: 0 0 5px #00ffff52, 0 0 10px #00ffff88, 0 0 15px #00ffff60;
+    transition: all 0.3s ease-in-out;
+}
+
+.Register:hover {
+    animation: glow-cyan-animation 1.5s infinite alternate;
+}
+@keyframes glow-cyan-animation {
+    0% {
+        box-shadow: 0 0 5px #00ffff8f, 0 0 10px #00ffffa1, 0 0 15px #00ffff7d;
+        transform: scale(1);
+    }
+
+    100% {
+        box-shadow: 0 0 20px #00ffffab, 0 0 30px #00ffffa8, 0 0 40px #00ffff9e;
+        transform: scale(1.1);
+    }
+}
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    height: 200px; /* Increased footer height */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller screens, adjust font sizes and layout */
+@media (max-width: 768px) {
+    .event-description h1 {
+        font-size: 2rem;
+    }
+
+    .event-description p {
+        font-size: 1rem;
+    }
+
+    .register-button {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-description h1 {
+        font-size: 1.8rem;
+    }
+
+    .event-description p {
+        font-size: 0.95rem;
+    }
+
+    .register-button {
+        padding: 0.5rem 1.2rem;
+    }
+}

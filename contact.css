@@ -1,0 +1,203 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Russo One', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: none; /* Ensure no background color to preserve video visibility */
+}
+h1, h2, h3, h4, h5, h6, p, a, .navbar, .member-role, .member-name, .member-contact, .footer-container {
+    font-family: 'Russo One', sans-serif;
+}
+
+.navbar {
+    background-color: rgba(21, 22, 24, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px 0px 20px ; /* Increased padding for better spacing */
+    position: fixed;
+    width: 100%; /* Full-width navbar */
+    top: 0;
+    z-index: 100; /* Ensure navbar is above all elements */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically center items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.navbar-logo img {
+    height: 40px; /* Adjust the logo height */
+}
+
+.navbar-links {
+    display: flex; /* Arrange links horizontally */
+    gap: 20px; /* Space between links */
+}
+
+.navbar-links a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    /* White text */
+    text-align: center;
+    padding: 6px 20px;
+    /* Decrease padding by 3px */
+    text-decoration: none;
+    border-radius: 20px;
+    /* Circular edges */
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+}
+
+.navbar-links a:hover {
+    background-color: rgba(255, 20, 147, 0.7); /* Highlight color on hover */
+}
+
+/* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Main Content Wrapper */
+.content {
+    flex: 1;
+    padding: 150px 20px 50px; /* Adjusted padding for spacing below navbar */
+    text-align: center;
+    z-index: 1; /* Content appears over the video */
+}
+
+/* Main Heading Styling */
+.main-heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; /* Glowing effect */
+}
+
+/* Contact Section Layout */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Row layout for each contact (Convener/Co-Convener) */
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Alternating row layout (photo left, text right for odd; reverse for even) */
+.contact-row:nth-child(odd) .member-photo {
+    order: 1;
+}
+.contact-row:nth-child(odd) .member-info {
+    order: 2;
+}
+.contact-row:nth-child(even) .member-photo {
+    order: 2;
+}
+.contact-row:nth-child(even) .member-info {
+    order: 1;
+}
+
+/* Photo Styling */
+.member-photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Info Box Styling */
+.member-info {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Info Text */
+.member-info p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links on smaller screens */
+    }
+    .contact-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .member-info {
+        text-align: center;
+    }
+}
+
+.member-role {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; /* Glowing effect */
+}
+/* Adjust padding or position of the roller */
+.roller-container {
+    padding-top: 60px; /* Add padding to prevent overlap */
+    z-index: 0; /* Ensure it doesn't go above other elements */
+}
+
+.navbar {
+    z-index: 100; /* Keep the navbar above the roller */
+}

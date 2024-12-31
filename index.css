@@ -1,0 +1,615 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+    /* Allow scrolling only in the y-axis */
+    overflow-x: hidden;
+    /* Prevent scrolling in the x-axis */
+    background: linear-gradient(135deg, rgba(10, 10, 35, 0.7), rgba(28, 21, 54, 0.7));
+    /* Dark blue to indigo gradient with reduced opacity */
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: rgba(21, 22, 24, 0.7);
+    /* Revert to original color with reduced opacity */
+    color: white;
+    padding: 2px 0;
+    /* Decrease padding by 3px */
+    text-align: center;
+    position: fixed;
+    width: calc(100% - 17px);
+    /* Adjust width to avoid overlapping with scrollbar */
+    top: 0;
+    z-index: 1;
+    /* Ensure it is above other elements */
+}
+
+.navbar-logo {
+    float: left;
+    padding: 6px 20px;
+    /* Decrease padding by 3px */
+}
+
+.navbar-logo img {
+    height: 40px;
+    /* Adjust the height as needed */
+}
+
+.navbar-links {
+    float: right;
+}
+
+.navbar-links a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    /* White text */
+    text-align: center;
+    padding: 6px 20px;
+    /* Decrease padding by 3px */
+    text-decoration: none;
+    border-radius: 20px;
+    /* Circular edges */
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+}
+
+.navbar-links a:hover {
+    background-color: rgba(255, 20, 147, 0.7);
+    /* Dark pink on hover with reduced opacity */
+}
+
+.container {
+    position: relative;
+    /* Allow scrolling */
+    width: 100%;
+    height: 100%;
+    /* Remove the height restriction */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Stack elements vertically */
+}
+
+.floating-logo {
+    position: absolute;
+    top: 60%;
+    /* Start below the center */
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /* Move up from below */
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.005);
+    /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* Align elements horizontally */
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    /* Add transition effect */
+}
+
+.floating-logo img {
+    height: 150px;
+    /* Adjust the height as needed */
+    margin-right: 20px;
+    /* Space between logo and name */
+}
+
+.company-name h1 {
+    font-size: 90px;
+    /* Increase font size */
+    font-weight: bolder;
+    /* Make it bolder */
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+    margin: 0;
+    color: #eceeee;
+    /* Sky blue color */
+    text-shadow: 0 0 1px #9ed9f0, 0 0 3px #97c9dd, 0 0 10px #a5d7eb, 0 0 12px #9acbdf;
+    /* Reduced glow effect */
+}
+
+.company-slogan {
+    position: absolute;
+    top: 70%;
+    /* Adjust the position as needed */
+    left: 50%;
+    transform: translate(-50%, 100%);
+    /* Start from below */
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.005);
+    /* Semi-transparent background */
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    /* Adjust the font size as needed */
+    color: #87CEEB;
+    /* Sky blue color */
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+    /* Reduced glow effect */
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    /* Add transition effect */
+}
+
+.output {
+    width: 100%;
+    /* Make output container cover full width */
+    height: 100%;
+}
+
+.video-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    /* Semi-transparent background */
+    border-radius: 10px;
+    /* Ensure video is left-aligned and text is right-aligned */
+    flex-direction: row;
+    gap: 40px; /* Add this line to increase the distance between video and text */
+}
+
+.video-text-container video {
+    width: 45%;
+    /* Adjust the width as needed */
+    border-radius: 10px;
+}
+
+.video-text-container  .text-content {
+    width: 45%;
+    /* Adjust the width as needed */
+
+    padding: 20px;
+    color: #FFF;
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+    text-shadow: 0 0 3px #87CEEB, 0 0 3px #87CEEB, 0 0 3px #87CEEB, 0 0 3px #87CEEB;
+    /* Reduced glow effect */
+}
+
+.background-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#A {
+    z-index: 1;
+    position: relative;
+    margin-top: 10px;
+    /* Add space between company name and element A */
+}
+
+.clubs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+    /* Increase gap between video text container and cards container */
+}
+
+.clubs h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+    color: #FFF;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+    /* Match text container style */
+}
+
+.flip-card {
+    background-color: rgba(0, 0, 0, 0); /* Decrease opacity */
+    width: 20%;
+    height: 350px;
+    perspective: 1000px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    padding: 3px; /* Decrease padding to reduce border width */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Flip 540 degrees on hover */
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+.flip-card-back a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.flip-card-front {
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.flip-card-front h2 {
+    margin-top: 10px;
+    font-family: 'Russo One', sans-serif;
+    color: #FFF;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+}
+
+.flip-card-back {
+    background-color: #000;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 24px;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+}
+
+/* Remove the explore button */
+.explore-button {
+    display: none;
+}
+
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    /* Decrease gap between cards container and sponsors section */
+    gap: 20px; /* Add gap between sponsor elements */
+}
+
+.sponsors h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+    color: #FFF;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+    /* Match text container style */
+}
+
+.sponsor-logo {
+    width: 20%;
+    margin: 20px;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    align-self: flex-start; /* Align sponsor1 to the left */
+}
+
+/* Add styles for the new sponsor element */
+.new-sponsor-logo {
+    width: 20%;
+    margin: 20px;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    align-self: flex-end; /* Align sponsor2 to the right */
+}
+
+.new-sponsor-logo img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.new-sponsor-logo a {
+    display: inline;
+    white-space: nowrap;
+    margin-top: 5px 0 5px 0;
+    font-family: 'Russo One', sans-serif;
+    font-size: 19px;
+    color: #f4f6f7;
+    text-decoration: none;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+}
+
+.new-sponsor-logo a:hover {
+    color: #FFF;
+}
+
+.new-sponsor-logo a.form-link {
+    display: inline;
+    margin-top: 7px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 14px;
+    color: #87CEEB;
+    text-decoration: none;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+}
+
+.new-sponsor-logo a.form-link:hover {
+    color: #FFF;
+}
+
+.flip-card {
+    padding: 7px;
+    border-radius: 10px;
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.flip-card::after,
+.flip-card::before {
+    content: '';
+    position: absolute;
+    /*background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);*/
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.flip-card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5; 
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.image-border {
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.image-border::after,
+.image-border::before {
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    z-index: 10;
+    padding: 100px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.image-border::before {
+    filter: blur(1.5rem);
+    opacity: 10;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+    /* Allow scrolling only in the y-axis */
+    overflow-x: hidden;
+    /* Prevent scrolling in the x-axis */
+    background: linear-gradient(135deg, rgba(10, 10, 35, 0.7), rgba(28, 21, 54, 0.7));
+    /* Dark blue to indigo gradient with reduced opacity */
+    color: #FFF;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    /* Allow scrolling */
+    width: 100%;
+    height: 100%;
+    /* Remove the height restriction */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Stack elements vertically */
+}
+
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    /* Decrease gap between cards container and sponsors section */
+    gap: 20px; /* Add gap between sponsor elements */
+}
+
+.sponsors h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+    color: #FFF;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+    /* Match text container style */
+}
+
+.sponsor-logo {
+    width: 20%;
+    margin: 20px;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    align-self: flex-start; /* Align sponsor1 to the left */
+}
+
+.sponsor-logo img {
+    width: 100%;
+    /* Adjust the width as needed */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.sponsor-logo a {
+    display: inline;
+    white-space: nowrap;
+    margin-top: 5px 0 5px 0;
+    font-family: 'Russo One', sans-serif;
+    font-size: 19px;
+    color: #f4f6f7;
+    text-decoration: none;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+}
+
+.sponsor-logo a:hover {
+    color: #FFF;
+}
+
+.sponsor-logo a.form-link {
+    display: inline;
+    margin-top: 7px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 14px;
+    color: #87CEEB;
+    text-decoration: none;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+}
+
+.sponsor-logo a.form-link:hover {
+    color: #FFF;
+}
+
+.selected-part {
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+    font-size: 80px;
+    color: #FFF;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+    /* Match text container style */
+}
+
+/* Footer styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container p {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+social-links {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.social-links a {
+    margin: 0 10px;
+    z-index: 1;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    z-index: 1;
+}
+
+/* Form section styles */
+.form-section {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: #FFF;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+    white-space: nowrap; /* Ensure text and link are on a single line */
+}
+
+.form-section a.form-link {
+    display: inline;
+    margin-top: 10px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 18px;
+    color: #87CEEB;
+    text-decoration: none;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+}
+
+.form-section a.form-link:hover {
+    color: #FFF;
+}

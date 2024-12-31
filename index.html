@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NEXUS</title>
+    <!-- Google Fonts link for Russo One -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <style data-rc-order="prependQueue" data-rc-priority="-999" data-css-hash="afqinz" data-token-hash="1pjg6ju"
+        data-cache-path="1pjg6ju|Shared|wayin">
+        .css-dev-only-do-not-override-1dv7gqc a {
+            color: #800080;
+            /* Purple */
+            text-decoration: none;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+            transition: color 0.3s;
+            -webkit-text-decoration-skip: objects;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc a:hover {
+            color: #9932CC;
+            /* Dark Orchid */
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc a:active {
+            color: #4B0082;
+            /* Indigo */
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc a:active,
+        .css-dev-only-do-not-override-1dv7gqc a:hover {
+            text-decoration: none;
+            outline: 0;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc a:focus {
+            text-decoration: none;
+            outline: 0;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc a[disabled] {
+            color: rgba(0, 0, 0, 0.25);
+            cursor: not-allowed;
+        }
+    </style>
+    <style data-rc-order="prependQueue" data-rc-priority="-999" data-css-hash="5akfm0" data-token-hash="1pjg6ju"
+        data-cache-path="1pjg6ju|Drawer-Drawer|wayin-drawer|anticon">
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer::before,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer::after {
+            box-sizing: border-box;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer [class^="wayin-drawer"],
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer [class*=" wayin-drawer"] {
+            box-sizing: border-box;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer [class^="wayin-drawer"]::before,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer [class*=" wayin-drawer"]::before,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer [class^="wayin-drawer"]::after,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer [class*=" wayin-drawer"]::after {
+            box-sizing: border-box;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-pure {
+            position: relative;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-pure.wayin-drawer-left {
+            box-shadow: 6px 0 16px 0 rgba(0, 0, 0, 0.08), 3px 0 6px -4px rgba(0, 0, 0, 0.12), 9px 0 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-pure.wayin-drawer-right {
+            box-shadow: -6px 0 16px 0 rgba(0, 0, 0, 0.08), -3px 0 6px -4px rgba(0, 0, 0, 0.12), -9px 0 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-pure.wayin-drawer-top {
+            box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-pure.wayin-drawer-bottom {
+            box-shadow: 0 -6px 16px 0 rgba(0, 0, 0, 0.08), 0 -3px 6px -4px rgba(0, 0, 0, 0.12), 0 -9px 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-inline {
+            position: absolute;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            background: rgba(0, 0, 0, 0.45);
+            pointer-events: auto;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-content-wrapper {
+            position: absolute;
+            z-index: 0;
+            max-width: 100vw;
+            transition: all 0.3s;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-content-wrapper-hidden {
+            display: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-left>.wayin-drawer-content-wrapper {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            box-shadow: 6px 0 16px 0 rgba(0, 0, 0, 0.08), 3px 0 6px -4px rgba(0, 0, 0, 0.12), 9px 0 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-right>.wayin-drawer-content-wrapper {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: -6px 0 16px 0 rgba(0, 0, 0, 0.08), -3px 0 6px -4px rgba(0, 0, 0, 0.12), -9px 0 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-top>.wayin-drawer-content-wrapper {
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-bottom>.wayin-drawer-content-wrapper {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 -6px 16px 0 rgba(0, 0, 0, 0.08), 0 -3px 6px -4px rgba(0, 0, 0, 0.12), 0 -9px 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: #ffffff;
+            pointer-events: auto;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-header {
+            display: flex;
+            flex: 0;
+            align-items: center;
+            padding: 16px 24px;
+            font-size: 14px;
+            line-height: 1.5714285714285714;
+            border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-header-title {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            min-width: 0;
+            min-height: 0;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-extra {
+            flex: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-close {
+            display: inline-flex;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            justify-content: center;
+            align-items: center;
+            margin-right: 8px;
+            color: rgba(0, 0, 0, 0.45);
+            font-weight: 600;
+            font-size: 14px;
+            font-style: normal;
+            line-height: 1;
+            text-align: center;
+            text-transform: none;
+            text-decoration: none;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-rendering: auto;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-close:hover {
+            color: rgba(0, 0, 0, 0.88);
+            background-color: rgba(0, 0, 0, 0.06);
+            text-decoration: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-close:active {
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-close:focus-visible {
+            outline: 4px solid #fff2f0;
+            outline-offset: 1px;
+            transition: outline-offset 0s, outline 0s;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-title {
+            flex: 1;
+            margin: 0;
+            color: rgba(0, 0, 0, 0.88);
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.5714285714285714;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-body {
+            flex: 1;
+            min-width: 0;
+            min-height: 0;
+            padding: 24px;
+            overflow: auto;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-body .wayin-drawer-body-skeleton {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-footer {
+            flex-shrink: 0;
+            padding: 8px 16px;
+            border-top: 1px solid rgba(5, 5, 5, 0.06);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer-rtl {
+            direction: rtl;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-enter-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-appear-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-leave-start {
+            transition: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-appear-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-leave-active {
+            transition: all 0.3s;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-enter,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-appear {
+            opacity: 0;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-appear-active {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-leave {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-mask-motion-leave-active {
+            opacity: 0;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-enter-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-appear-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-leave-start {
+            transition: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-appear-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-leave-active {
+            transition: all 0.3s;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-enter,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-appear {
+            opacity: 0.7;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-appear-active {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-leave {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-leave-active {
+            opacity: 0.7;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-enter,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-appear {
+            transform: translateX(-100%);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-appear-active {
+            transform: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-leave {
+            transform: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-left-leave-active {
+            transform: translateX(-100%);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-enter-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-appear-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-leave-start {
+            transition: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-appear-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-leave-active {
+            transition: all 0.3s;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-enter,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-appear {
+            opacity: 0.7;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-appear-active {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-leave {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-leave-active {
+            opacity: 0.7;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-enter,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-appear {
+            transform: translateX(100%);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-appear-active {
+            transform: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-leave {
+            transform: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-right-leave-active {
+            transform: translateX(100%);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-enter-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-appear-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-leave-start {
+            transition: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-appear-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-leave-active {
+            transition: all 0.3s;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-enter,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-appear {
+            opacity: 0.7;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-appear-active {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-leave {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-leave-active {
+            opacity: 0.7;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-enter,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-appear {
+            transform: translateY(-100%);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-appear-active {
+            transform: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-leave {
+            transform: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-top-leave-active {
+            transform: translateY(-100%);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-enter-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-appear-start,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-leave-start {
+            transition: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-appear-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-leave-active {
+            transition: all 0.3s;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-enter,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-appear {
+            opacity: 0.7;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-appear-active {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-leave {
+            opacity: 1;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-leave-active {
+            opacity: 0.7;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-enter,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-appear {
+            transform: translateY(100%);
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-enter-active,
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-appear-active {
+            transform: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-leave {
+            transform: none;
+        }
+
+        .css-dev-only-do-not-override-1dv7gqc.wayin-drawer .wayin-drawer-panel-motion-bottom-leave-active {
+            transform: translateY(100%);
+        }
+        
+    </style>
+    <style data-rc-order="prependQueue" data-css-hash="13duhwi" data-token-hash="1pjg6ju"
+        data-cache-path="1pjg6ju|ant-design-icons|anticon">
+        .anticon {
+            display: inline-flex;
+            align-items: center;
+            color: inherit;
+            font-style: normal;
+            line-height: 0;
+            text-align: center;
+            text-transform: none;
+            vertical-align: -0.125em;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .anticon>* {
+            line-height: 1;
+        }
+
+        .anticon svg {
+            display: inline-block;
+        }
+
+        .anticon .anticon .anticon-icon {
+            display: block;
+        }
+    </style>
+    <style data-rc-order="prependQueue" data-css-hash="1hgregh" data-token-hash="1husd2j"
+        data-cache-path="1husd2j|ant-design-icons|anticon">
+        .anticon {
+            display: inline-flex;
+            align-items: center;
+            color: inherit;
+            font-style: normal;
+            line-height: 0;
+            text-align: center;
+            text-transform: none;
+            vertical-align: -0.125em;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .anticon>* {
+            line-height: 1;
+        }
+
+        .anticon svg {
+            display: inline-block;
+        }
+
+        .anticon .anticon .anticon-icon {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="index.css">
+
+  
+    
+    
+</head>
+
+<body
+    onload="document.querySelector('.floating-logo').style.opacity = 1; document.querySelector('.floating-logo').style.transform = 'translate(-50%, -50%)'; document.querySelector('.company-slogan').style.opacity = 1; document.querySelector('.company-slogan').style.transform = 'translate(-50%, 0)';">
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="images/logoiitjammu.png" alt="Institute Logo"> <!-- Replace with your logo path -->
+        </div>
+        <div class="navbar-links">
+            <a href="#about">About Us</a>
+            <a href="teams.html">Teams</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+    <!-- partial:index.partial.html -->
+   
+    <div id="container" class="container">
+        <!-- Floating logo container -->
+        <div class="floating-logo">
+            <img src="images/image1.png.png" alt="Company Logo"> <!-- Replace with your company logo path -->
+            <div class="company-name">
+                <h1>NEXUS</h1>
+            </div> <!-- Replace with your company name -->
+            <!-- <div id="A"><p>UNITE || COMPETE || CONQUER</p></div> -->
+        </div>
+        <!-- Company slogan container -->
+        <div class="company-slogan">
+            <p> UNITE || COMPETE || CONQUER </p> <!-- Replace with your company slogan -->
+        </div>
+      
+
+        <div id="output" class="output">
+            <!--
+  </div>
+  <ul id="links" class="links">
+    <p>Press space to drop or pick up the light. Enter key to add another one</p>
+    <li><a class="who" href="https://twitter.com/msurguy" target="_blank">by msurguy</a></li>
+    <li><a class="blog" href="http://maxoffsky.com" target="_blank">Blog post</a></li>
+    <li><a class="source" href="https://github.com/msurguy/triangles" target="_blank">GitHub</a></li>
+  </ul>
+
+</div>
+
+<div id="controls" class="controls">
+</div>
+-->
+            <!-- partial -->
+            <script src="script.js"></script><canvas width="134" height="885" style="display: block;"></canvas>
+        </div>
+    </div>
+    <!-- New video and text container -->
+    <div class="video-text-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QUsaN6ZKJGg?si=1ujzawdDUfIzUaNz"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- <section id="about"> -->
+        <div class="text-content" id="about">
+            <h2>WORD FROM TEAM</h2>
+            <p>NEXUS is the ‘Inter-Branch Tech Competition’ of IIT Jammu, designed exclusively for its UG
+                students. </p>
+            <p>Our goal is to make technology a core part of every student’s journey at IIT Jammu. This competition
+                isn’t just a platform to display talent—it’s a gateway to bigger opportunities like Anhad and
+                prestigious national-level tech contests. Let’s come together, explore our potential, and make this
+                event an unforgettable experience for all!</p>
+        </div>
+    <!-- </section> -->
+    </div>
+    <!-- Background video container -->
+    <div class="background-video-container">
+        <video autoplay muted loop>
+            <source src="videos/nexus.mp4" type="video/mp4"> 
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div id="wayin-not-video-container">
+        <div class="main-content">
+            <!-- Clubs section -->
+            <div class="clubs">
+                <h1>OUR CLUBS</h1> <!-- Move heading here -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/codingclub.png" alt="Club 1 Image"> <!-- Replace with your image path -->
+                            <h2>CODING CLUB</h2>
+                            <button class="explore-button">EXPLORE</button>
+                        </div>
+                        <div class="flip-card-back">
+                           <p> <a href="Coding_club/cp-hackathon.html"target="_blank">CP Sprint</a><br>
+                            <a href="Coding_club/ctf.html"target="_blank">CTF</a><br>
+                            <a href="Coding_club/game-dev.html"target="_blank">Game Dev</a><br>
+                            <a href="Coding_club/ml-hackathon.html" target="_blank">ML Forge</a><br>
+                            <a href="Coding_club/webd.html" target="_blank">Web-Storm</a></p>
+                            <!-- Add more events as needed -->
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/astriazanew.png" alt="Club 2 Image"> <!-- Replace with your image path -->
+                            <h2>ASTRIA ZA</h2>
+                            <button class="explore-button">EXPLORE</button>
+                        </div>
+                        <div class="flip-card-back">
+                           <p> <a href="Astriaza/astronomy-bowl.html"target="_blank">Astronomy Bowl</a><br>
+                            <a href="Astriaza/maths-bowl.html"target="_blank">Maths Bowl</a><br>
+                            <a href="Astriaza/physics-bowl.html"target="_blank">Physics Bowl</a><br>
+                            <a href="Astriaza/water-rocket.html"target="_blank">Water-Rocket</a></p>
+                            <!-- Add more events as needed -->
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/fintech.png" alt="Club 3 Image"> <!-- Replace with your image path -->
+                            <h2>FINTECH</h2>
+                            <button class="explore-button">EXPLORE</button>
+                        </div>
+                        <div class="flip-card-back">
+                          <p>  <a href="Fintech/algo-trading.html"target="_blank">Algo Trading</a><br>
+                            <a href="Fintech/case-study-competition.html"target="_blank">Case Study</a><br>
+                            <a href="Fintech/crypto-trading.html"target="_blank">Crypto Trading</a><br>
+                            <a href="Fintech/stock-trading.html"target="_blank">Stock Trading</a><br>
+                            <!-- Add more events as needed --></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/sae.png" alt="Club 4 Image"> <!-- Replace with your image path -->
+                            <h2>SAE CLUB</h2>
+                            <button class="explore-button">EXPLORE</button>
+                        </div>
+                        <div class="flip-card-back">
+                        <p><a href="SAE/auto.html"target="_blank">Automobile Quiz</a><br>
+                            <a href="SAE/bridgethon.html"target="_blank">Bridge-A-Thon</a></p>
+                            <!-- Add more events as needed -->
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/robo.png" alt="Club 5 Image"> <!-- Replace with your image path -->
+                            <h2>ROBOTICS CLUB</h2>
+                            <button class="explore-button">EXPLORE</button>
+                        </div>
+                        <div class="flip-card-back">
+                           <p> <a href="Robosapiens/dr.html"target="_blank">Design Rumble</a><br>
+                            <a href="Robosapiens/nanovoyager.html"target="_blank">Nanovoyager</a><br>
+
+                            <a href="Robosapiens/rc.html"target="_blank">RC Throttle</a><br>
+                            <a href="Robosapiens/ros.html"target="_blank">ROS NEXUS</a>
+                            <!-- Add more events as needed --></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image above sponsors section -->
+            <div style="text-align: center; margin-top: 40px;">
+                <p class="selected-part" >EVENTS</p>
+                <img src="images/YO.png" alt="Image Above Sponsors"
+                    style="max-width: 600px; max-height: 800px; height: auto; border-radius: 20px;">
+            </div>
+
+            <!-- Sponsors section -->
+            <div class="sponsors">
+                <h1>OUR SPONSORS</h1>
+                <div class="sponsor-logo">
+                    <!-- Replace with your sponsor logo path -->
+                    <div id="sponsor1" style="width: 100%; height: 150px; background: url('images/sponsor1.png') no-repeat center center; background-size: contain;"></div>
+                    <a href="https://www.finlatics.com" target="_blank">FINLATICS</a>
+                   <!-- Replace with your sponsor website URL and name -->
+                   
+                </div>
+                
+                <div class="sponsor-logo">
+                    <!-- Replace with your sponsor logo path -->
+                    <div id="sponsor2" style="width: 100%; height: 150px; background: url('images/sponsor2.png') no-repeat center center; background-size: contain;"></div>
+                    <a href="https://www.instagram.com/berry.amc/" target="_blank">BERRY AMC</a>
+                   <!-- Replace with your sponsor website URL and name -->
+                   
+                </div>
+               
+            </div>
+            <!-- Text and Google Form link below sponsors section -->
+            <div class="form-section">
+                <p>Please fill this <a href="https://forms.gle/your-google-form-link" target="_blank" class="form-link">form</a> to become our sponsor.</p>
+            </div>
+        </div>
+
+
+
+
+       
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2025 NEXUS .All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/@IITJammuOfficial/" target="_blank">
+                        <img src="Team_pics/fb.png" alt="Facebook">
+                    </a>
+                    <a href="https://x.com/IITJammu?mx=2" target="_blank">
+                        <img src="Team_pics/x.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/iit.jammu/?hl=en" target="_blank">
+                        <img src="Team_pics/insta.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.iitjammu.ac.in/" target="_blank">
+                        <img src="Team_pics/iit-jammu-01.jpg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </footer>
+      
+</body>
+
+</html>
