@@ -96,7 +96,7 @@ body, html {
     text-transform: uppercase;
     margin-bottom: 20px;
     color: #ffffff;
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    text-shadow: 0 0 5px #a7f2fc, 0 0 5px #a4def6, 0 0 3px #a4d2e8;
 }
 
 /* Members container - horizontal alignment */
