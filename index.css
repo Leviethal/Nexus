@@ -737,3 +737,7 @@ social-links {
         height: 100%;
     }
 }
+.timeline h2,p{
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+
+}
