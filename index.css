@@ -299,6 +299,14 @@ html {
     text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
 }
 
+/* ...existing code... */
+.flip-card:hover .flip-card-back {
+    background-color: #333; /* Change background color on hover */
+    color: #00bbff; /* Change text color on hover */
+   
+}
+/* ...existing code... */
+
 /* Remove the explore button */
 .explore-button {
     display: none;
@@ -741,3 +749,10 @@ social-links {
     text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
 
 }
+
+/* ...existing code... */
+.flip-card-back a:hover {
+    color: #97e0ed; /* Change text color on hover */
+    font-size: 26px; /* Change font size on hover */
+}
+/* ...existing code... */
