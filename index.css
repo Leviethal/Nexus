@@ -613,3 +613,127 @@ social-links {
 .form-section a.form-link:hover {
     color: #FFF;
 }
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px 9vw;
+}
+
+.timeline-container {
+    padding: 10px 0;
+    position: relative;
+    width: 50%;
+}
+
+.text-box {
+    padding: 20px 30px;
+    background: #180336ba;
+    position: relative;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+}
+
+.left {
+    box-shadow: 0 0 20px rgb(0, 255, 255);
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+    /* animation: slide-right 6s linear forwards; */
+}
+
+.push-right {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.push-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.right {
+    padding-left: 40px;
+    box-shadow: 0 0 20px #ff1f80;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+    /* animation: slide-left 6s linear forwards; */
+}
+
+.timeline-container img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+
+/* .text-box.active {
+    opacity: 1;
+    transform: translateX(0);
+} */
+
+/* @keyframes slide-right {
+    0% {
+        opacity: 1;
+        transform: translateX(-50vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+} */
+
+/* @keyframes slide-left {
+    0% {
+        opacity: 1;
+        transform: translateX(50vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+} */
+
+
+.right-container img {
+    left: -20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 15s linear forwards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
