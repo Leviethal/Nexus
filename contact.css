@@ -201,3 +201,26 @@ footer {
 .navbar {
     z-index: 100; /* Keep the navbar above the roller */
 }
+/* Form section styles */
+.form-section {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: #FFF;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+    white-space: nowrap; /* Ensure text and link are on a single line */
+}
+
+.form-section a.form-link {
+    display: inline;
+    margin-top: 10px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 18px;
+    color: #87CEEB;
+    text-decoration: none;
+    text-shadow: 0 0 1px #87CEEB, 0 0 3px #87CEEB, 0 0 10px #87CEEB, 0 0 12px #87CEEB;
+}
+
+.form-section a.form-link:hover {
+    color: #FFF;
+}
