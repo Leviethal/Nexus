@@ -2,17 +2,23 @@
 @media (max-width: 768px) {
     /* Navbar adjustments */
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: center;
+        padding: 10px; /* Reduce padding */
+        height: auto; /* Adjust height to fit content */
+        z-index: 100; /* Ensure it's above other elements */
     }
 
+    .navbar-logo img {
+        height: 30px; /* Adjust logo size */
+        margin-bottom: 10px; /* Add spacing below the logo */
+    }
     .navbar-links {
         display: flex;
         flex-direction: column;
         gap: 10px;
         width: 100%;
-        text-align: left;
+        text-align: center;
     }
 
     .navbar-links a {
@@ -71,6 +77,9 @@
 /* Extra small screens (e.g., below 480px) */
 @media (max-width: 480px) {
     /* Navbar adjustments */
+    .navbar {
+        padding: 8px; /* Further reduce padding */
+    }
     .navbar-logo img {
         height: 30px;
     }
