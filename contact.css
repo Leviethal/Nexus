@@ -1,3 +1,109 @@
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar-links a {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    /* Main heading adjustments */
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    /* Contact section adjustments */
+    .contact-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .member-photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .member-info {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .member-info p {
+        font-size: 1rem;
+    }
+
+    /* Form section adjustments */
+    .form-section {
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+
+    .form-section a.form-link {
+        font-size: 1rem;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-links img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Extra small screens (e.g., below 480px) */
+@media (max-width: 480px) {
+    /* Navbar adjustments */
+    .navbar-logo img {
+        height: 30px;
+    }
+
+    .navbar-links a {
+        font-size: 0.9rem;
+    }
+
+    /* Contact section adjustments */
+    .contact-row {
+        gap: 15px;
+    }
+
+    .member-photo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .member-info p {
+        font-size: 0.9rem;
+    }
+
+    /* Main heading adjustments */
+    .main-heading {
+        font-size: 1.8rem;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        padding: 0 10px;
+    }
+}
+
 /* General Styles */
 html, body {
     margin: 0;
