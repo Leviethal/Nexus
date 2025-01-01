@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6, p, a, .navbar, .member-role, .member-name, .member-conta
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 50px;
-    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; /* Glowing effect */
+    text-shadow: 0 0 3px rgb(190, 229, 246), 0 0 3px white, 0 0 3px white; /* Glowing effect */
 }
 
 /* Contact Section Layout */
@@ -305,7 +305,7 @@ footer {
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
-    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; /* Glowing effect */
+    text-shadow: 0 0 3px rgb(181, 249, 255), 0 0 3px rgb(148, 247, 249), 0 0 3px rgb(171, 240, 252); /* Glowing effect */
 }
 /* Adjust padding or position of the roller */
 .roller-container {
