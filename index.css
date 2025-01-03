@@ -31,7 +31,7 @@ html {
   
   ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Color when hovering over the scrollbar thumb */
-}
+}/**/
 .navbar {
     background-color: rgba(21, 22, 24, 0.7);
     /* Revert to original color with reduced opacity */
@@ -777,5 +777,23 @@ social-links {
 .flip-card-back a:hover {
     color: #97e0ed; /* Change text color on hover */
     font-size: 26px; /* Change font size on hover */
+}
+
+/* ...existing code... */
+.flip-card-back h3 {
+    background-image: linear-gradient(to right, #ff5757, #ff66b4, #ff66b4, #ff71fe, #38b6ff, #5ce1e6, #00adad, #5170ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    font-size: 40px;
+    margin-bottom: 10px;
+    /* color: #f782f7; */
+     /* Purple-pink color for the heading */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 7px; /* Position near the top */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 /* ...existing code... */
