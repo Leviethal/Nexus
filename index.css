@@ -13,7 +13,25 @@ html {
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
 }
-
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+    width: 0;  /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounding the corners of the track */
+  }
+  
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounding the corners of the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovering over the scrollbar thumb */
+}
 .navbar {
     background-color: rgba(21, 22, 24, 0.7);
     /* Revert to original color with reduced opacity */
