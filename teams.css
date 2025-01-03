@@ -42,13 +42,16 @@ h1, h2, h3, h4, h5, h6, p, a, .navbar, .member-role, .member-name, .member-conta
     color: #ffffff;
     /* White text */
     text-align: center;
-    padding: 6px 20px;
+    padding: 0.3em 0.5em;
     /* Decrease padding by 3px */
     text-decoration: none;
     border-radius: 20px;
     /* Circular edges */
     font-family: 'Russo One', sans-serif;
     /* Change font style to Russo One */
+    margin: auto 0.3em;
+    transition: 0.2s ease-in;
+
 }
 
 .navbar-links a:hover {
