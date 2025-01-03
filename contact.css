@@ -22,8 +22,20 @@
     }
 
     .navbar-links a {
-        padding: 10px;
-        font-size: 1rem;
+        float: left;
+        display: block;
+        color: #ffffff;
+        /* White text */
+        text-align: center;
+        padding: 0.3em 0.5em;
+        /* Decrease padding by 3px */
+        text-decoration: none;
+        border-radius: 20px;
+        /* Circular edges */
+        font-family: 'Russo One', sans-serif;
+        /* Change font style to Russo One */
+        margin: auto 0.3em;
+        transition: 0.2s ease-in;
     }
 
     /* Main heading adjustments */
@@ -123,6 +135,26 @@ html, body {
     flex-direction: column;
     color: white;
     background: none; /* Ensure no background color to preserve video visibility */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+    width: 0;  /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounding the corners of the track */
+  }
+  
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounding the corners of the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovering over the scrollbar thumb */
 }
 h1, h2, h3, h4, h5, h6, p, a, .navbar, .member-role, .member-name, .member-contact, .footer-container {
     font-family: 'Russo One', sans-serif;
