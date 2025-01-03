@@ -200,7 +200,6 @@ footer {
 .social-links img {
     width: 24px;
     height: 24px;
-    filter: invert(1);
     z-index: 1;
 }
 
