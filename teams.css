@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6, p, a, .navbar, .member-role, .member-name, .member-conta
 .navbar {
     background-color: rgba(21, 22, 24, 0.7); /* Semi-transparent background */
     color: white;
-    padding: 10px 0px; /* Increased padding for better spacing */
+    padding: 2px 0px; /* Increased padding for better spacing */
     position: fixed;
     width: 100%; /* Full-width navbar */
     top: 0;
@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6, p, a, .navbar, .member-role, .member-name, .member-conta
     justify-content: space-between; /* Space between logo and links */
     align-items: center; /* Vertically center items */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
 }
 
 .navbar-logo img {
@@ -65,7 +66,25 @@ body, html {
     color: white;
     scroll-behavior: smooth;
 }
-
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+    width: 0;  /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounding the corners of the track */
+  }
+  
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounding the corners of the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovering over the scrollbar thumb */
+}
 /* Main content styling */
 .content {
     padding: 20px;

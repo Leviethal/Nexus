@@ -40,7 +40,7 @@ html {
     /* Decrease padding by 3px */
     text-align: center;
     position: fixed;
-    width: calc(100% - 17px);
+    width: 100%;
     /* Adjust width to avoid overlapping with scrollbar */
     top: 0;
     z-index: 1;
