@@ -237,7 +237,7 @@ footer {
 
 .Register {
     font-family: 'Russo One', sans-serif;
-    display: inline-block;
+    display: block; /* Ensure the button is centered */
     padding: 15px 30px;
     font-size: 16.8px;
     color: #fff;
@@ -249,6 +249,7 @@ footer {
     position: relative;
     overflow: hidden;
     text-align: center;
+    margin: 0 620px; /* Center the button */
 }
 
 .Register::before {
