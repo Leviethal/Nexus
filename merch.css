@@ -165,19 +165,25 @@ body, html {
     color: lightgray;
 }
 
-/* Footer styles */
 footer {
-    background-color: #000;
-    color: #fff;
+    position: absolute; /* Keep the footer at the bottom */
+    bottom: 0; /* Align the footer to the bottom */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Ensure the footer spans the full width */
+    background-color: #000; /* Background color */
+    color: #fff; /* Text color */
     padding: 20px 10px;
+    text-align: center; /* Center-align text */
+    z-index: 10; /* Keep it above background elements */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow above the footer */
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Optional: Max width for the content inside */
+    margin: 0 auto; /* Center the content */
 }
 
 .footer-container p {
@@ -189,19 +195,17 @@ footer {
 .social-links {
     display: flex;
     align-items: center;
-    z-index: 1;
 }
 
 .social-links a {
     margin: 0 10px;
-    z-index: 1;
 }
 
 .social-links img {
     width: 24px;
     height: 24px;
-    z-index: 1;
 }
+
 
 /* Blur-In Effect */
 .container {
@@ -235,21 +239,26 @@ footer {
     transform: scale(1.1);
   }
 
-.Register {
+  .Register {
     font-family: 'Russo One', sans-serif;
-    display: block; /* Ensure the button is centered */
+    display: flex; /* Change to flexbox for centering */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
     padding: 15px 30px;
     font-size: 16.8px;
     color: #fff;
     background-color: #040726a5;
-    border-radius: 5px;
+    border-radius: 25px; /* Circular edges for a consistent look */
     text-transform: uppercase;
     text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
     position: relative;
     overflow: hidden;
-    text-align: center;
-    margin: 0 620px; /* Center the button */
+    margin: 0 auto; /* Center the button horizontally */
+    width: 200px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    border: 2px solid #00ffff2f; /* Cyan border */
+    box-shadow: 0 0 5px #00ffff52, 0 0 10px #00ffff88, 0 0 15px #00ffff60;
 }
 
 .Register::before {
@@ -269,23 +278,26 @@ footer {
     transform: scale(1.05);
 }
 
-
 .Register:hover::before {
     left: 100%;
-}
-.Register {
-    width: 200px;
-    height: 50px;
-    border: 2px solid #00ffff2f;
-    /* Cyan border */
-    border-radius: 25px;
-    box-shadow: 0 0 5px #00ffff52, 0 0 10px #00ffff88, 0 0 15px #00ffff60;
-    transition: all 0.3s ease-in-out;
 }
 
 .Register:hover {
     animation: glow-cyan-animation 1.5s infinite alternate;
 }
+
+@keyframes glow-cyan-animation {
+    0% {
+        box-shadow: 0 0 5px #00ffff8f, 0 0 10px #00ffffa1, 0 0 15px #00ffff7d;
+        transform: scale(1);
+    }
+
+    100% {
+        box-shadow: 0 0 20px #00ffffab, 0 0 30px #00ffffa8, 0 0 40px #00ffff9e;
+        transform: scale(1.1);
+    }
+}
+
 @keyframes glow-cyan-animation {
     0% {
         box-shadow: 0 0 5px #00ffff8f, 0 0 10px #00ffffa1, 0 0 15px #00ffff7d;
