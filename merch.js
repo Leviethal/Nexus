@@ -1,21 +1,18 @@
-const tiles = document.querySelectorAll('.tile');
-const container = document.querySelector('.tiles-container');
+document.addEventListener("DOMContentLoaded", () => {
+    const containers = document.querySelectorAll(".container");
 
-function checkCenterTile() {
-    const containerRect = container.getBoundingClientRect();
-    const centerX = containerRect.width / 2;
+    const handleScroll = () => {
+        containers.forEach(container => {
+            const rect = container.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                container.classList.add("visible");
+            }
+        });
+    };
 
-    tiles.forEach(tile => {
-        const tileRect = tile.getBoundingClientRect();
-        const tileCenterX = tileRect.left + tileRect.width / 2;
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Trigger once on page load
 
-        if (Math.abs(centerX - tileCenterX) < tileRect.width / 2) {
-            tile.classList.add('enlarge');
-        } else {
-            tile.classList.remove('enlarge');
-        }
-    });
-}
-
-// Check the center tile periodically
-setInterval(checkCenterTile, 100);
+    const video = document.getElementById("background-video");
+    video.playbackRate = 0.7; // Slow down background video
+});

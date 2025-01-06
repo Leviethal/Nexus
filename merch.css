@@ -1,13 +1,4 @@
-/* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Russo One', sans-serif;
-    color: white;
-    background-color: #141414;
-    overflow-x: hidden;
-}
-
+/* Background video styling */
 #background-video {
     position: fixed;
     top: 0;
@@ -17,191 +8,229 @@ body, html {
     object-fit: cover;
     z-index: -1;
 }
+h1, h2, h3, h4, h5, h6, p, a, .navbar, .member-role, .member-name, .member-contact, .footer-container {
+    font-family: 'Russo One', sans-serif;
+}
 
 .navbar {
-    background-color: rgba(21, 22, 24, 0.7);
+    background-color: rgba(21, 22, 24, 0.7); /* Semi-transparent background */
     color: white;
-    padding: 10px 20px;
+    padding: 2px 0px; /* Increased padding for better spacing */
     position: fixed;
-    width: 100%;
+    width: 100%; /* Full-width navbar */
     top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    z-index: 100; /* Ensure navbar is above all elements */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically center items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
 }
 
 .navbar-logo img {
-    height: 40px;
+    height: 40px; /* Adjust the logo height */
+}
+
+.navbar-links {
+    display: flex; /* Arrange links horizontally */
+    gap: 20px; /* Space between links */
 }
 
 .navbar-links a {
-    color: white;
+    float: left;
+    display: block;
+    color: #ffffff;
+    /* White text */
+    text-align: center;
+    padding: 0.3em 0.5em;
+    /* Decrease padding by 3px */
     text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.3s;
+    border-radius: 20px;
+    /* Circular edges */
+    font-family: 'Russo One', sans-serif;
+    /* Change font style to Russo One */
+    margin: auto 0.3em;
+    transition: 0.2s ease-in;
+
 }
 
 .navbar-links a:hover {
-    color: pink;
+    background-color: rgba(255, 20, 147, 0.7); /* Highlight color on hover */
 }
 
-.merchandise-section {
-    margin-top: 100px;
-    text-align: center;
-    padding: 20px;
-}
 
-h1 {
-    margin: 20px 0;
-    font-size: 2rem;
-}
 
-.tiles-container {
-    position: relative;
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Russo One', sans-serif;
+    color: white;
     scroll-behavior: smooth;
 }
-
-.tiles {
-    display: flex;
-    animation: slide 20s linear infinite;
-    gap: 20px;
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+    width: 0;  /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounding the corners of the track */
+  }
+  
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounding the corners of the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovering over the scrollbar thumb */
+}
+/* Main content styling */
+.content {
+    padding: 20px;
+    text-align: center;
 }
 
-.tile {
-    flex: 0 0 auto;
-    width: 200px;
-    height: 300px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    align-items: center;
-    display: flex;
-    transition: transform 0.3s;
-}
-
-.tile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.tile:hover {
-    transform: scale(1.1);
-}
-
-.tiles:hover {
-    animation-play-state: paused;
-}
-
-.tile.enlarge {
-    transform: scale(1.5);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Keyframe Animation for Auto Sliding */
-/* Media Queries */
-@media (max-width: 768px) {
-    .carousel {
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .carousel-item {
-        width: 150px;
-        height: 250px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-}
-.Register {
-    display: flex; /* Use flexbox for centering content */
-    justify-content: center; /* Horizontally center the text */
-    align-items: center; /* Vertically center the text */
-    width: 200px; /* Ensure consistent button size */
-    height: 50px; /* Ensure consistent button size */
-    padding: 0; /* Remove any padding */
-    font-size: 16.8px;
-    color: #fff;
-    background-color: #040726a5;
-    border-radius: 25px;
+.main-heading {
+    font-size: 3rem;
     text-transform: uppercase;
-    text-decoration: none;
-    border: 2px solid #00ffff2f; /* Cyan border */
-    box-shadow: 0 0 5px #00ffff52, 0 0 10px #00ffff88, 0 0 15px #00ffff60;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-.Register-container {
+/* Club sections */
+.club-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    width: 80%;
+}
+
+.club-title {
+    text-align: center;    
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #a7f2fc, 0 0 5px #a4def6, 0 0 3px #a4d2e8;
+}
+
+/* Members container - horizontal alignment */
+.members {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Optional spacing */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.Register::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
+.member-card {
+    background-color: #111;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: scale(1.1);
+    border-width: 3px;
+    border-color: #f39c12;
+}
+
+.member-card img {
     width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: skewX(-30deg);
-    transition: left 0.4s ease;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.Register:hover {
-    animation: glow-cyan-animation 1.5s infinite alternate;
-    transform: scale(1.05);
+.member-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-
-
-.Register:hover::before {
-    left: 100%;
-}
-.Register {
-    width: 200px;
-    height: 50px;
-    border: 2px solid #00ffff2f;
-    /* Cyan border */
-    border-radius: 25px;
-    box-shadow: 0 0 5px #00ffff52, 0 0 10px #00ffff88, 0 0 15px #00ffff60;
-    transition: all 0.3s ease-in-out;
+.member-contact {
+    font-size: 0.9rem;
+    color: lightgray;
 }
 
-.Register:hover {
-    animation: glow-cyan-animation 1.5s infinite alternate;
+/* Footer styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 10px;
 }
-@keyframes glow-cyan-animation {
-    0% {
-        box-shadow: 0 0 5px #00ffff8f, 0 0 10px #00ffffa1, 0 0 15px #00ffff7d;
-        transform: scale(1);
-    }
 
-    100% {
-        box-shadow: 0 0 20px #00ffffab, 0 0 30px #00ffffa8, 0 0 40px #00ffff9e;
-        transform: scale(1.1);
-    }
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+.footer-container p {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.social-links a {
+    margin: 0 10px;
+    z-index: 1;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+}
+
+/* Blur-In Effect */
+.container {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+    transition: opacity 1s ease, filter 1s ease, transform 1s ease;
+}
+
+.container.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+.club-name {
+    font-size: 3.5em; /* Adjust size as needed */
+    font-weight: bold;
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #86a8e7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    display: inline-block;
+    width: 100%; 
+    margin: 0 auto; 
+  }
+  
+  .club-name:hover {
+    transform: scale(1.1);
+  }
