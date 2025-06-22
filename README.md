@@ -1,6 +1,6 @@
-# 🌐 Nexus - IIT Jammu Technical Fest
+# 🌐 Nexus - IIT JAMMU'S Inter-branch Technical Fest
 
-Welcome to the official repository for **Nexus**, the annual technical fest of **IIT Jammu** — a celebration of innovation, technology, and creativity! This website serves as the central hub for all information regarding Nexus, including events, team details, merchandise, and more.
+Welcome to the official repository for **Nexus**, the annual inter-branch technical fest of **IIT Jammu** — a celebration of innovation, technology, and creativity! This website serves as the central hub for all information regarding Nexus, including events, team details, merchandise, and more.
 
 ---
 
