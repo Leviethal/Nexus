@@ -46,9 +46,9 @@ To run the website locally:
 Developed with ❤️ by the **Nexus Web Team** at **IIT Jammu**:
 
 - 🚀 [Daksh Singhal](https://github.com/Leviethal)
-- 🎯 [Harshit](https://github.com/Harshit-iitj)
 - 🔮 [Hemant Nagar](https://github.com/LASTHALFBLOODPRINCE)
-- 🎨 Ishita Gangwar
+- 🎯 [Harshit](https://github.com/Harshit-iitj)
+- 🎨 [Ishita Gangwar](https://github.com/Ishita-Gangwar)
 
 ---
 
